@@ -1,8 +1,10 @@
-# Setup Guide
+# webproject
+
+## Setup Guide
 
 This guide describes a generic local setup. Adjust commands to your project's stack.
 
-## Prerequisites
+### Prerequisites
 
 - Git
 - Node.js (LTS) and npm or Yarn — if the project uses Node
@@ -10,7 +12,7 @@ This guide describes a generic local setup. Adjust commands to your project's st
 - Docker (optional) — for containerized services
 - A code editor (VS Code, etc.)
 
-## Environment
+### Environment
 
 1. Clone the repo:
    git clone <repo-url>
@@ -20,7 +22,7 @@ This guide describes a generic local setup. Adjust commands to your project's st
    cp .env.example .env
    Edit `.env` with required values (API keys, DB URLs, secrets).
 
-## Install dependencies
+### Install dependencies
 
 - Node:
   npm install
@@ -32,14 +34,14 @@ This guide describes a generic local setup. Adjust commands to your project's st
   source .venv/bin/activate   # Windows: .venv\Scripts\activate
   pip install -r requirements.txt
 
-## Database / Migrations (if applicable)
+### Database / Migrations (if applicable)
 
 - Start DB (local or Docker)
 - Create database and run migrations:
   - Example (Node/ORM): npm run migrate
   - Example (Python/Alembic): alembic upgrade head
 
-## Run application
+### Run application
 
 - Development:
   npm run dev
@@ -49,20 +51,20 @@ This guide describes a generic local setup. Adjust commands to your project's st
   npm run build
   npm start
 
-## Tests
+### Tests
 
 - Run unit tests:
   npm test
   or
   pytest
 
-## Troubleshooting
+### Troubleshooting
 
 - Check `.env` values and required services (DB, cache).
 - Inspect logs printed to console.
 - If dependency issues occur, remove node_modules or virtual env and reinstall.
 
-## Notes
+### Notes
 
 - Update this file with stack-specific commands and any service credentials or third-party setup needed.
 
